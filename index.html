@@ -1,0 +1,14 @@
+<html>
+  <head>
+  </head>
+  <body>
+  Your location
+    <input id="yourLocation" style="width: 50vw" />
+    <script>
+      function readPosition(position) {
+        document.getElementById('yourLocation').value = '/' + position.coords.latitude + ',' + position.coords.longitude;
+      }
+      navigator.geolocation.getCurrentPosition(readPosition);
+    </script>
+  </body>
+</html>
